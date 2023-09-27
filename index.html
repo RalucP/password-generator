@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Resources/favicon.ico" type="image/x-icon">
+    <title>Password generator</title>
+</head>
+<body>
+    <section class="container">
+        <h1 class="title">Password Generator</h1>
+        <p class="description">Generate strong, customized passwords with our app. 
+            Tailor the length, symbol and numberic inclusion for ultimate security and convenience.</p>
+        <div class="settings">
+            <div class="settings-flex">
+                <div class="form-item">
+                    <input type="checkbox" id="symbols" name="Add symbols" value="Symbols">
+                    <label for="symbols">Include symbols</label>
+                </div>
+                <div class="form-item">
+                    <input type="checkbox" id="numbers" name="Add numbers" value="Numbers">
+                    <label for="numbers">Include numbers</label>
+                </div>
+                <div class="form-item">
+                    <input type="range" name="characters" min="8" max="22" value="10" id="numch" oninput="numchlbl.value=numch.value">
+                    <input id="numchlbl" type="number" value="10" min="8" max="22" oninput="numch.value=numchlbl.value" disabled/>
+                </div>
+            </div>
+            <button class="submit-button" id="button">Generate password</button>
+        </div>
+        <div class="result">
+            <div class="result-item">
+                <input type="text" value="" disabled>
+                </input>
+                <img src="./Resources/copy-to-clipboard.svg" alt="copy-to-clipboard">
+            </div> 
+            <div class="result-item">
+                <input type="text" value="" disabled>
+                </input>
+                <img src="./Resources/copy-to-clipboard.svg" alt="copy-to-clipboard">
+            </div>
+        </div>
+    </section>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

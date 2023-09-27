@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg: #363b38;
+    --bg-2: #222523;
+    --btn-hover: #585858;
+    --btn-active: #464545;
+    --fg: #e0dddd;
+    --fg-2: #958c8c;
+    --accent: #3ca55f;
+    --accent-2: #ef4d4d;
+}
+
+*{
+    font-family: 'Inter Tight', sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+.container{
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    
+    width: 40%;
+    height: 60%;
+
+    padding: 2em 4em;
+
+    background-color: var(--bg-2);
+    border-radius: 2em;
+}
+
+.title{
+    text-align: left;
+    margin: 1em 0;
+    font-size: 2.5em;
+}
+
+.description{
+    color: var(--fg-2);
+    margin: 0;
+}
+
+.settings{
+    margin: 1.5em 0;
+}
+
+.settings-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settings input[type="checkbox"]{
+    display: none;
+}
+
+.settings label{
+    background-color: var(--accent-2);
+    padding: 0.5em 1em;
+
+    border-radius: 0.3em;
+
+    cursor: pointer;
+}
+
+.settings label::before{
+    content: '❌ ';
+}
+
+.settings input[type="checkbox"]:checked + label{
+    background-color: var(--accent);
+}
+
+.settings input[type="checkbox"]:checked + label::before{
+    content: '✅ ';
+}
+
+.settings input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+
+.settings input[type="number"]{
+    border: 0;
+    padding: 1em 0.5em;
+
+    background-color: var(--bg-2);
+    color: var(--fg);
+
+    font-size: 1em;
+
+    cursor: default;
+}
+
+.settings .submit-button{
+    margin: 2em 34%;
+    padding: 0.6em 2em;
+    border-radius: 0.5em;
+    border: none;
+
+    background-color: var(--bg);
+    color: var(--fg);
+
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.settings .submit-button:hover{
+    background-color: var(--btn-hover);
+}
+
+.settings .submit-button:active{
+    background-color: var(--btn-active);
+}
+
+.result{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.result-item{
+    display: flex;
+    gap: 1em;
+
+    background-color: var(--bg);
+    width: fit-content;
+    border-radius: 0.5em;
+
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+.result-item input[type="text"]{
+    padding: 0;
+    margin: 0;
+
+    background-color: var(--bg);
+    border: none;
+
+    color: var(--fg);
+}
+
+.result-item input[type="text"]:active{
+    border: none;
+}
+
+.result-item img{
+    cursor: pointer;
+}
